@@ -18,19 +18,19 @@
         <button onclick="zastosuj()">Zastosuj</button>
     </section>
     <section class="block">
-        <img src="pomarancza.jpg" alt="drzewo pomarańczy"> <br>
-        <button>Kolorowy</button>
-        <button>Czarno-biały</button>
+        <img src="pomarancza.jpg" alt="drzewo pomarańczy" id="obraz2"> <br>
+        <button onclick="kolor()">Kolorowy</button>
+        <button onclick="czarnoBialy()">Czarno-biały</button>
     </section>
     <section class="block">
-        <img src="owoce.jpg" alt="Kosz pełen owoców"> <br>
+        <img src="owoce.jpg" alt="Kosz pełen owoców" id="obraz3"> <br>
         <input type="range" id="suwak1" min="0" max="100" value="100"> <br>
-        <button>Zastosuj</button>
+        <button onclick="przezroczystosc()">Zastosuj</button>
     </section>
     <section class="block">
-        <img src="zolw.jpg" alt="Żółw w wodzie"> <br>
+        <img src="zolw.jpg" alt="Żółw w wodzie" id="obraz4"> <br>
         <input type="range" id="suwak2" min="0" max="250"> <br>
-        <button>Zastosuj</button>
+        <button onclick="jasnosc()">Zastosuj</button>
     </section>
     <footer>
         <a href="http://www.css.com" target="_blank" rel="noopener noreferrer">Zobacz inne efekty obrazu</a>
@@ -52,5 +52,22 @@
             obraz1.style.filter="invert(100%)";
         }
     }
+
+    const czarnoBialy=()=>{
+        obraz2.style.filter="grayscale(100%)";
+    }
+
+    const kolor=()=>{
+        obraz2.style.filter="none";
+    }
+
+    const przezroczystosc=()=>{
+        obraz3.style.filter="opacity("+suwak1.value+"%)";
+    }
+
+    const jasnosc=()=>{
+        obraz4.style.filter="brightness("+suwak2.value+"%)";
+    }
+
 </script>
 </html>
