@@ -11,11 +11,11 @@
         <h2>Efekty na obrazach</h2>
     </header>
     <section class="block">
-        <img src="pszczola.jpg" alt="pszczoła na fioletowym kwiatku"> <br>
-        <input type="radio" name="opcja" id="Blur">Blur <br>
-        <input type="radio" name="opcja" id="Sepia">Sepia <br>
-        <input type="radio" name="opcja" id="Negatyw">Negatyw <br>
-        <button>Zastosuj</button>
+        <img src="pszczola.jpg" alt="pszczoła na fioletowym kwiatku" id="obraz1"> <br>
+        <input type="radio" name="opcja" id="blu">Blur <br>
+        <input type="radio" name="opcja" id="sepia">Sepia <br>
+        <input type="radio" name="opcja" id="negatyw">Negatyw <br>
+        <button onclick="zastosuj()">Zastosuj</button>
     </section>
     <section class="block">
         <img src="pomarancza.jpg" alt="drzewo pomarańczy"> <br>
@@ -36,8 +36,21 @@
         <a href="http://www.css.com" target="_blank" rel="noopener noreferrer">Zobacz inne efekty obrazu</a>
         <p>Stronę wykonał: AW</p>
     </footer>
-
-
-
 </body>
+<script>
+    const zastosuj=()=>{
+        if(blu.checked)
+        {
+            obraz1.style.filter="blur(8px)";
+        }
+        if(sepia.checked)
+        {
+            obraz1.style.filter="sepia(100%)";
+        }
+        if(negatyw.checked)
+        {
+            obraz1.style.filter="invert(100%)";
+        }
+    }
+</script>
 </html>
